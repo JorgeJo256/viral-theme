@@ -73,6 +73,7 @@
         </div>
         </section>
     </header>
+    <br><br>
     <footer class="row b-black footer justi-center">
         <div>
             <figure class="footerLogo_img a-center">
