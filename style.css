@@ -1,0 +1,17 @@
+/*
+Theme Name: Viral Magazine Theme
+Author: @jojorgea
+Author URI: https://www.instagram.com/jojorgea/
+Description: Tema para el sitio web Viral
+Version: 1.0
+Tags: simple, magazine, minimalistic
+*/
+.panelContenedor{
+    background-color:yellow;
+}
+.mainFrame{
+    background-color:blue;
+   }
+.sidebar{
+    background-color:red;
+}
