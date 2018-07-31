@@ -1,0 +1,70 @@
+/* # reset */
+*, *:after, *:before {
+    box-sizing: border-box;
+    }
+    html, body, h1, h2, h3, h4, h5, h6, ul, li, figure, .row {
+    margin: 0;
+    padding: 0;
+    }
+    figure img {
+    width: 100%;
+    height: 100%;
+    }
+    a, a:hover {
+    text-decoration: none;
+    }
+    body {
+    font-size: 16px;
+    font-family: Tahoma;
+    font-family: 'Montserrat', sans-serif;
+    }
+    nav ul {
+    list-style: none;
+    }
+/* # theme */
+
+/* ## Text Changes*/
+
+.t-white { color: #ffffff; }
+.t-black { color: #000000; }
+.t-pink { color: #ff64e0}
+.t-center { text-align: center;}
+
+/* ## Elements */
+
+.e-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.justi-center{ justify-content: center; }
+.a-center{ align-items: center; }
+.fullwidth{ width: 100%;}
+
+
+/* ## BG changes*/
+
+.b-white { background-color: #ffffff; }
+.b-black { background-color: #000000; }
+.b-pink { background-color: #ff64e0}
+
+/* # Componentes */
+/* ## Header */
+
+.headerLogo_img{
+    width: 6em;
+}
+
+.header{
+    border-bottom: 3px solid #000000;
+    padding: 2em 0em 1em;
+    align-items: center;
+}
+
+.footer{    
+    padding: 1em 0em 1em;
+}
+
+.footerLogo_img{
+    width: 6em;
+}
