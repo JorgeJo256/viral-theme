@@ -27,8 +27,10 @@
 
 .t-white { color: #ffffff; }
 .t-black { color: #000000; }
-.t-pink { color: #ff64e0}
+.t-black:hover { color: #000000; }
+.t-pink { color: #ff64e0;}
 .t-center { text-align: center;}
+.t-bold { font-weight: bolder;}
 
 /* ## Elements */
 
@@ -46,7 +48,7 @@
 
 .b-white { background-color: #ffffff; }
 .b-black { background-color: #000000; }
-.b-pink { background-color: #ff64e0}
+.b-pink { background-color: #ff64e0;}
 
 /* # Componentes */
 /* ## Header */
@@ -54,7 +56,6 @@
 .headerLogo_img{
     width: 6em;
 }
-
 .header{
     border-bottom: 3px solid #000000;
     padding: 2em 0em 1em;
@@ -67,4 +68,26 @@
 
 .footerLogo_img{
     width: 6em;
+}
+
+/* # Categories */
+
+.category_title{
+    display: inline-block;
+    padding: 0.2em .4em .2em;
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+.category_list{
+    padding-top: .7em;
+    border-top: 3px solid #000000;
+}
+
+.category_link:first-child{
+    padding-left: 0;
+}
+
+.category_link:last-child{
+    padding-right: 0;
 }

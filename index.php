@@ -1,85 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Viral</title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/assets/css/viral.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-</head>
-<body>
-    <header class="row header">
-        <section class="col-6 header_main">
-            <section class="col-12 header_logo">
-                <figure class="headerLogo_img e-center">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/viral.png" alt="Logo Viral" title="Logo Vira">
-                </figure>
-            </section>
-            <nav class="col-12 header_nav">
-                <ul class="nav nav_main justi-center">
-                    <li class="nav-item nav_item">
-                        <a class="nav-link nav_link t-black" href="#">Tecnología</a>
-                    </li>
-                    <li class="nav-item nav_item">
-                        <a class="nav-link nav_link t-black" href="#">Youtube</a>
-                    </li>
-                    <li class="nav-item nav_item">
-                        <a class="nav-link nav_link t-black" href="#">Música</a>
-                    </li>
-                    <li class="nav-item nav_item">
-                        <a class="nav-link nav_link t-black" href="#">Series</a>
-                    </li>
-                </ul>
-            </nav>
+<?php get_header();?>
+        <section class="content col-9">
+            <section class="category">
+                <h3 class="category_title b-black t-white">Música</h3>
+                <div class="category_list row">
+                    <!-- php Programming to view new entries -->
+                    <?php
+                        $args = array( 'post_type' => 'post', 'category_name' => 'musica', 'posts_per_page' => 3 );
+                        $col_the_query = new WP_Query( $args );
+                        if ( $col_the_query->have_posts() ) :
+                        while ( $col_the_query->have_posts() ) : $col_the_query->the_post(); ?>
+                            <a href="<?php the_permalink() ?>" class="col-4 t-black category_link">
+                                <div class="card">
+                                    <figure class="card-img-top">
+                                    <?php
+                                        if ( has_post_thumbnail() ) :
+                                        the_post_thumbnail();
+                                        endif;
+                                    ?>                
+                                    </figure>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php the_title(); ?></h5>
+                                        <p class="card-text"><?php the_excerpt(); ?></p>
+                                    </div>
+                                </div>
+                            </a> 
+                    <?php endwhile; endif; wp_reset_postdata(); ?>                       
+                </div>
+            </section>    
+            <section class="category">
+                <h3 class="category_title b-black t-white">Entrenenimiento</h3>
+                <div class="category_list row">
+                    <!-- php Programming to view new entries -->
+                    <?php
+                        $args = array( 'post_type' => 'post', 'category_name' => 'entretenimiento', 'posts_per_page' => 3 );
+                        $col_the_query = new WP_Query( $args );
+                        if ( $col_the_query->have_posts() ) :
+                        while ( $col_the_query->have_posts() ) : $col_the_query->the_post(); ?>
+                            <a href="<?php the_permalink() ?>" class="col-4 t-black category_link">
+                                <div class="card">
+                                    <figure class="card-img-top">
+                                    <?php
+                                        if ( has_post_thumbnail() ) :
+                                        the_post_thumbnail();
+                                        endif;
+                                    ?>                
+                                    </figure>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php the_title(); ?></h5>
+                                        <p class="card-text"><?php the_excerpt(); ?></p>
+                                    </div>
+                                </div>
+                            </a> 
+                    <?php endwhile; endif; wp_reset_postdata(); ?>                       
+                </div>
+            </section>  
+            
         </section>
-        <section class="col-6 header_sec a-center">
-            <div class="row full-width">
-                <nav class="col-5 nav_social">
-                    <ul class="nav nav_main">
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link active" href="#">
-                                <i class="t-black fab fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="#">
-                                <i class="t-black fab fa-twitter-square"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="#">
-                                <i class="t-black fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="#">
-                                <i class="t-black fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>   
-                <section class="search_input col-7 a-center">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div> 
-                </section>
-        </div>
-        </section>
-    </header>
-    <br><br>
-    <footer class="row b-black footer justi-center">
-        <div>
-            <figure class="footerLogo_img a-center">
-                <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/viral2.png" alt="Logo de Viral">
-            </figure>
-        </div>
-    </footer>
-</body>
-</html>
+        <aside class="sidebar col-3">
+            side bar
+        </aside>
+<?php get_footer();?>
