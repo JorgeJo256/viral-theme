@@ -26,6 +26,7 @@
 /* ## Text Changes*/
 
 .t-white { color: #ffffff; }
+.t-white:hover { color: #ffffff; }
 .t-black { color: #000000; }
 .t-black:hover { color: #000000; }
 .t-pink { color: #ff64e0;}
@@ -41,7 +42,7 @@
 
 .justi-center{ justify-content: center; }
 .a-center{ align-items: center; }
-.fullwidth{ width: 100%;}
+.full-width{ width: 100%;}
 
 
 /* ## BG changes*/
@@ -61,7 +62,7 @@
     padding: 2em 0em 1em;
     align-items: center;
 }
-
+/*  # Footer */
 .footer{    
     padding: 1em 0em 1em;
 }
@@ -69,7 +70,6 @@
 .footerLogo_img{
     width: 6em;
 }
-
 /* # Categories */
 
 .category_title{
@@ -87,8 +87,7 @@
 .category_link:first-child{
     padding-left: 0;
 }
-
-.category_link:last-child{
+.category_link:last-child{  
     padding-right: 0;
 }
 

@@ -10,20 +10,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
 <body>
-    <header class="row header">
+    <header class="row header"> 
         <section class="col-6 header_main">
             <section class="col-12 header_logo">
                 <figure class="headerLogo_img e-center">
                     <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/viral.png" alt="Logo Viral" title="Logo Viral">
                 </figure>
             </section>
-
             <?php wp_nav_menu( array(
                 'theme_location' => 'header_menu',
                 'container' => 'nav',
                 'container_class' => 'col-12 header_nav',
                 'container_id' => '',
-                'items_wrap' => '<ul class="nav nav_main justi-center t-bold">%3$s</ul>',
+                'items_wrap' => '<ul class="nav nav_main justi-center t-bold t-black">%3$s</ul>',
                 'menu_class' => 'nav-item nav_item'
             )); ?>
 
