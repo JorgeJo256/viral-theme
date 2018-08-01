@@ -20,7 +20,11 @@
                                     </figure>
                                     <div class="card-body">
                                         <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <p class="card-text"><?php the_excerpt(); ?></p>
+                                        <p class="card-text">
+                                            <div class="textCard">
+                                                <?php the_excerpt(); ?>
+                                            </div>
+                                        </p>
                                     </div>
                                 </div>
                             </a> 
@@ -28,11 +32,11 @@
                 </div>
             </section>    
             <section class="category">
-                <h3 class="category_title b-black t-white">Entrenenimiento</h3>
+                <h3 class="category_title b-black t-white">Farandula</h3>
                 <div class="category_list row">
                     <!-- php Programming to view new entries -->
                     <?php
-                        $args = array( 'post_type' => 'post', 'category_name' => 'entretenimiento', 'posts_per_page' => 3 );
+                        $args = array( 'post_type' => 'post', 'category_name' => 'farandula', 'posts_per_page' => 3 );
                         $col_the_query = new WP_Query( $args );
                         if ( $col_the_query->have_posts() ) :
                         while ( $col_the_query->have_posts() ) : $col_the_query->the_post(); ?>
@@ -47,14 +51,18 @@
                                     </figure>
                                     <div class="card-body">
                                         <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <p class="card-text"><?php the_excerpt(); ?></p>
+                                        <p class="card-text">
+                                            <div class="textCard">
+                                                <?php the_excerpt(); ?>
+                                            </div>
+                                        </p>
                                     </div>
                                 </div>
                             </a> 
                     <?php endwhile; endif; wp_reset_postdata(); ?>                       
                 </div>
             </section>  
-            
+            <br>
         </section>
         <aside class="sidebar col-3">
             side bar
