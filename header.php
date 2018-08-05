@@ -17,6 +17,7 @@
                     <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/viral.png" alt="Logo Viral" title="Logo Viral">
                 </figure>
             </section>
+
             <?php wp_nav_menu( array(
                 'theme_location' => 'header_menu',
                 'container' => 'nav',
@@ -29,40 +30,28 @@
         </section>
         <section class="col-6 header_sec a-center">
             <div class="row full-width">
-                <nav class="col-5 nav_social">
-                    <ul class="nav nav_main">
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link active" href="#">
-                                <i class="t-black fab fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="#">
-                                <i class="t-black fab fa-twitter-square"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="https://instagram.com/jojorgea" target="_blank">
-                                <i class="t-black fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item nav_item">
-                            <a class="nav-link nav_link" href="#">
-                                <i class="t-black fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>   
-                <section class="search_input col-7 a-center">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                <i class="fas fa-search t-black"></i>
-                            </button>
-                        </div>
-                    </div> 
-                </section>
+
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'social_menu',
+                    'container' => 'nav',
+                    'container_class' => 'col-5 social__nav',
+                    'container_id' => '',
+                    'items_wrap' => '<ul class="nav social__nav justi-center">%3$s</ul>',
+                    'menu_class' => 'nav-item nav_item social__nav',
+                    'link_before' => '<span class= "d-none social__nav" >',
+                    'link_after' => '</span>'
+                )); ?>
+
+                    <section class="search_input col-7 a-center">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Buscar" aria-label="Búsqueda" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                    <i class="fas fa-search t-black"></i>
+                                </button>
+                            </div>
+                        </div> 
+                    </section>
         </div>
         </section>
     </header>

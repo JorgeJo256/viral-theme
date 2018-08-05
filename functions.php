@@ -16,12 +16,13 @@ if(function_exists('register_nav_menus')){
 add_filter( 'nav_menu_link_attributes', 'class_main_nav', 10, 3);
 function class_main_nav ($atts, $item, $args){
     $class = 'nav-link nav_link justi-center';
-    if($args ->theme_location=='header_menu'){
+    if($args ->theme_location=='header_menu'):
         $class .= ' t-black t-bold';
-    }else if($args ->theme_location=='footer_menu'){
+    elseif($args ->theme_location=='footer_menu'):
         $class .= ' t-white';
-    }
-    
+    elseif($args ->theme_location=='social_menu'):
+        $class .= ' t-black social__nav';
+    endif;
     $atts['class'] = $class;
     return $atts;
 }
